@@ -3,33 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <title>KD FireProject</title>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/index.css">
+    <style>
+      body {
+       background: url(CSS/footer_lodyas.png); 
+      }
+     </style>
   </head>
   <body>
+    <div id="main-grid">
     <!--главная картинка сайта-->
     <header>
-      <img src="header.png" height="90%" width="90%" />
+      <img src="header.png"/>
     </header>
     <!--навигация по страничкам сайта-->
     <nav>
       <table border="1">
         <tr>
-          <td><a href="index.html"> ШОУ ПРОГРАМИ </a></td>
+          <td><a href="index.html"> ШОУ ПРОГРАММЫ </a></td>
           <td><a href="constructor.html">КОНСТРУКТОР ШОУ</a></td>
           <td><a href="rider.html">РАЙДЕР</a></td>
           <td><a href="about.html"> ПРО НАС </a></td>
-          <td><a href="contacts.html">КОНТАКТИ</a></td>
+          <td><a href="contacts.html">КОНТАКТЫ</a></td>
         </tr>
       </table>
     </nav>
     <!--название текущей странички-->
-    <div>
+    <div class="name">
       <hr />
-      <h3>ШОУ ПРОГРАМИ</h3>
+      <h3>ШОУ ПРОГРАММЫ</h3>
       <hr />
     </div>
     <!--блок первой програмы-->
-    <article>
-      <h4>ПРОГРАМА 1</h4>
+    <article class="prog1">
+      <h4>ПРОГРАММА 1</h4>
       <img src="photos/prog1.JPG" height="50%" width="50%" />
       <p>
         Текст описания програмы, длительность, стиль, колличество человек и
@@ -38,12 +47,12 @@
       <!-- тут также будет ссілка на видео с полной программой-->
       <!-- <video URL="youtube.com/blabla"> Видео не поддерживается браузером </video> -->
       <form>
-        <button type="submit">ЗАМОВИТИ</button>
+        <button type="submit">ЗАКАЗАТЬ</button>
       </form>
     </article>
     <!--блок второй програмы-->
-    <article>
-      <h4>ПРОГРАМА 2</h4>
+    <article class="prog2">
+      <h4>ПРОГРАММА 2</h4>
       <img src="photos/prog2.JPG" height="50%" width="50%" />
       <p>
         Текст описания програмы, длительность, стиль, колличество человек и
@@ -52,12 +61,12 @@
       <!-- тут также будет ссілка на видео с полной программой-->
       <!-- <video URL="youtube.com/blabla"> Видео не поддерживается браузером </video> -->
       <form>
-        <button type="submit">ЗАМОВИТИ</button>
+        <button type="submit">ЗАКАЗАТЬ</button>
       </form>
     </article>
     <!--блок третьей програмы-->
-    <article>
-      <h4>ПРОГРАМА 3</h4>
+    <article class="prog3">
+      <h4>ПРОГРАММА 3</h4>
       <img src="photos/prog3.JPG" height="50%" width="50%" />
       <p>
         Текст описания програмы, длительность, стиль, колличество человек и
@@ -66,7 +75,7 @@
       <!-- тут также будет ссілка на видео с полной программой-->
       <!-- <video URL="youtube.com/blabla"> Видео не поддерживается браузером </video> -->
       <form>
-        <button type="submit">ЗАМОВИТИ</button>
+        <button type="submit">ЗАКАЗАТЬ</button>
       </form>
     </article>
     <footer>
@@ -77,5 +86,6 @@
         ><img src="icons/instagram_logo.png" height="10%" width="10%" />
       </a>
     </footer>
+  </div>
   </body>
 </html>
