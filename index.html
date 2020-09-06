@@ -16,30 +16,26 @@
     <div id="main-grid">
     <!--главная картинка сайта-->
     <header>
-      <img src="header.png"/>
+      <img class="headimg" src="header.png"/>
     </header>
     <!--навигация по страничкам сайта-->
     <nav>
-      <table border="1">
-        <tr>
-          <td><a href="index.html"> ШОУ ПРОГРАММЫ </a></td>
-          <td><a href="constructor.html">КОНСТРУКТОР ШОУ</a></td>
-          <td><a href="rider.html">РАЙДЕР</a></td>
-          <td><a href="about.html"> ПРО НАС </a></td>
-          <td><a href="contacts.html">КОНТАКТЫ</a></td>
-        </tr>
-      </table>
+      <ul class="menu">
+          <li><a href="index.html"> ШОУ ПРОГРАММЫ </a></li>
+          <li><a href="constructor.html">КОНСТРУКТОР ШОУ</a></li>
+          <li><a href="rider.html">РАЙДЕР</a></li>
+          <li><a href="about.html"> ПРО НАС </a></li>
+          <li><a href="contacts.html">КОНТАКТЫ</a></li>
+      </ul>
     </nav>
     <!--название текущей странички-->
     <div class="name">
-      <hr />
-      <h3>ШОУ ПРОГРАММЫ</h3>
-      <hr />
+      <h2>ШОУ ПРОГРАММЫ</h3>
     </div>
     <!--блок первой програмы-->
-    <article class="prog1">
+    <article class="prog">
       <h4>ПРОГРАММА 1</h4>
-      <img src="photos/prog1.JPG" height="50%" width="50%" />
+      <img class="photo" src="photos/prog1.JPG" height="50%" width="50%" />
       <p>
         Текст описания програмы, длительность, стиль, колличество человек и
         реквизита
@@ -47,11 +43,11 @@
       <!-- тут также будет ссілка на видео с полной программой-->
       <!-- <video URL="youtube.com/blabla"> Видео не поддерживается браузером </video> -->
       <form>
-        <button type="submit">ЗАКАЗАТЬ</button>
+        <button type="button">ЗАКАЗАТЬ</button>
       </form>
     </article>
     <!--блок второй програмы-->
-    <article class="prog2">
+    <article class="prog">
       <h4>ПРОГРАММА 2</h4>
       <img src="photos/prog2.JPG" height="50%" width="50%" />
       <p>
@@ -65,7 +61,7 @@
       </form>
     </article>
     <!--блок третьей програмы-->
-    <article class="prog3">
+    <article class="prog">
       <h4>ПРОГРАММА 3</h4>
       <img src="photos/prog3.JPG" height="50%" width="50%" />
       <p>
