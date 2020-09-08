@@ -13,8 +13,8 @@
      </style>
   </head>
   <body>
-    <div id="main-grid">
-    <!--главная картинка сайта-->
+    <div id="main-grid">  
+     <!--главная картинка сайта-->
     <header>
       <img class="headimg" src="header.png"/>
     </header>
@@ -35,52 +35,75 @@
     <!--блок первой програмы-->
     <article class="prog">
       <h4>ПРОГРАММА 1</h4>
-      <img class="photo" src="photos/prog1.JPG" height="50%" width="50%" />
-      <p>
-        Текст описания програмы, длительность, стиль, колличество человек и
-        реквизита
-      </p>
+      <div class="program-info">
+        <div class="program-info-desc">
+           Текст описания програмы, длительность, стиль, колличество человек и
+           реквизита
+        </div>
+        <div class="program-info-img">
+          <img class="photo" src="photos/prog1.JPG"/>
+        </div>
       <!-- тут также будет ссілка на видео с полной программой-->
       <!-- <video URL="youtube.com/blabla"> Видео не поддерживается браузером </video> -->
-      <form>
-        <button type="button">ЗАКАЗАТЬ</button>
-      </form>
+      </div>
+      <div class="order">
+        <form>
+         <button class="order-form" type="button">ЗАКАЗАТЬ</button>
+       </form>
+      </div>
     </article>
     <!--блок второй програмы-->
     <article class="prog">
       <h4>ПРОГРАММА 2</h4>
-      <img src="photos/prog2.JPG" height="50%" width="50%" />
-      <p>
-        Текст описания програмы, длительность, стиль, колличество человек и
-        реквизита
-      </p>
-      <!-- тут также будет ссілка на видео с полной программой-->
-      <!-- <video URL="youtube.com/blabla"> Видео не поддерживается браузером </video> -->
-      <form>
-        <button type="submit">ЗАКАЗАТЬ</button>
-      </form>
+      <div class="program-info">
+        <div class="program-info-img">
+          <img class="photo" src="photos/prog2.JPG" height="50%" width="50%" />
+        </div>
+        <div class="program-info-desc">
+           Текст описания програмы, длительность, стиль, колличество человек и
+           реквизита
+        </div>
+            <!-- тут также будет ссілка на видео с полной программой-->
+            <!-- <video URL="youtube.com/blabla"> Видео не поддерживается браузером </video> -->
+      </div>
+      <div class="order">
+        <form>
+          <button class="order-form" type="submit">ЗАКАЗАТЬ</button>
+        </form>
+      </div>
     </article>
     <!--блок третьей програмы-->
     <article class="prog">
       <h4>ПРОГРАММА 3</h4>
-      <img src="photos/prog3.JPG" height="50%" width="50%" />
-      <p>
-        Текст описания програмы, длительность, стиль, колличество человек и
-        реквизита
-      </p>
-      <!-- тут также будет ссілка на видео с полной программой-->
-      <!-- <video URL="youtube.com/blabla"> Видео не поддерживается браузером </video> -->
-      <form>
-        <button type="submit">ЗАКАЗАТЬ</button>
-      </form>
+      <div class="program-info">
+        <div class="program-info-desc">
+          Текст описания програмы, длительность, стиль, колличество человек и
+          реквизита
+          </div>
+        <div class="program-info-img">
+          <img class="photo" src="photos/prog3.JPG" height="50%" width="50%" />
+        </div>
+          <!-- тут также будет ссілка на видео с полной программой-->
+          <!-- <video URL="youtube.com/blabla"> Видео не поддерживается браузером </video> -->
+      </div>
+        <div class="order">
+          <form>
+            <button class="order-form" type="submit">ЗАКАЗАТЬ</button>
+          </form>
+        </div>
     </article>
     <footer>
-      <a href="https://www.youtube.com/channel/UCzvjfXRmL9pdY0H-le1D39Q"
-        ><img src="icons/youtube_logo.jpg" height="10%" width="10%" />
-      </a>
-      <a href="https://instagram.com/kd_fire_project?igshid=op9rw8sdgwmq"
-        ><img src="icons/instagram_logo.png" height="10%" width="10%" />
-      </a>
+      <div class="links">
+        <a href="https://www.youtube.com/channel/UCzvjfXRmL9pdY0H-le1D39Q"
+          ><img class="youtube" src="icons/youtube_logo.png"/>
+        </a>
+        <a href="https://instagram.com/kd_fire_project?igshid=op9rw8sdgwmq"
+          ><img class="insta" src="icons/instagram_logo.png"/>
+        </a>
+        <a href="https://www.facebook.com/FireProjectKD">
+          <img class="fb" src="icons/fb_logo.png">
+        </a>
+      </div>
     </footer>
   </div>
   </body>
