@@ -1,78 +1,140 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <title>KD FireProject</title>
-  </head>
 
-  <body>
-    <!--главная картинка сайта-->
-    <header>
-      <img src="header.png" height="90%" width="90%" />
-    </header>
-    <!--навигация по страничкам сайта-->
-    <nav>
-      <table border="1">
-        <tr>
-          <td><a href="index.html"> ШОУ ПРОГРАМИ </a></td>
-          <td><a href="constructor.html">КОНСТРУКТОР ШОУ</a></td>
-          <td><a href="rider.html">РАЙДЕР</a></td>
-          <td><a href="about.html"> ПРО НАС </a></td>
-          <td><a href="contacts.html">КОНТАКТИ</a></td>
-        </tr>
-      </table>
-    </nav>
-    <!--название текущей странички-->
-    <div>
-      <hr />
-      <h3>КОНСТРУКТОР ШОУ</h3>
-      <hr />
-    </div>
+<head>
+  <meta charset="UTF-8" />
+  <title>KD FireProject</title>
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/constructor.css">
+</head>
+
+<body>
+  <!--главная картинка сайта-->
+  <header>
+    <img class="headimg" src="header.png" />
+  </header>
+  <!--навигация по страничкам сайта-->
+  <nav>
+    <ul class="menu">
+      <li><a href="index.html"> ШОУ ПРОГРАММЫ </a></li>
+      <li><a href="constructor.html">КОНСТРУКТОР ШОУ</a></li>
+      <li><a href="rider.html">РАЙДЕР</a></li>
+      <li><a href="about.html"> О НАС </a></li>
+      <li><a href="contacts.html">КОНТАКТЫ</a></li>
+    </ul>
+  </nav>
+  <!--название текущей странички-->
+  <div class="name">
+    <h2>КОНСТРУКТОР ШОУ</h2>
+  </div>
     <!--раздел с конструктором программ. В зависимости от выбора функций меняются картинки-->
-    <article>
-      <table border="1">
-        <tr>
-          <td>ПРОГРАМА 1</td>
-          <td>ПРОГРАМА 2</td>
-          <td>ПРОГРАМА 3</td>
-          <td>ФОТО З ВОГНЕМ</td>
-          <td>ДОДАТКОВІ ПОСЛУГИ</td>
-        </tr>
-      </table>
-    </article>
-    <div>
-      <img src="photos/pr2_1pers.jpg" height="50%" width="50%" />
-      <img src="photos/pr3_1pers.jpg" height="50%" width="50%" />
-      <img src="photos/pr3_2pers.jpg" height="50%" width="50%" />
+  <form id="constructorForm">
+    <div id="progButtons">
+        <input type="radio" id="prog1" name="progs" checked>
+        <label for="prog1">ПРОГРАММА 1</label>
+        <input type="radio" id="prog2" name="progs">
+        <label for="prog2">ПРОГРАММА 2</label>
+        <input type="radio" id="prog3" name="progs">
+        <label for="prog3">ПРОГРАММА 3</label>
     </div>
-    <div><span>500</span> грн</div>
-    <div>
-      <label for="artists">Кількість артистів</label>
-      <input type="range" min="1" max="8" id="artists" />
+    <canvas id="canvaPic"  width= '800px' height= '500px'></canvas> 
+    <div id="price">
+      <input type="text" id="priceInput" value="2000" disabled />
     </div>
-    <div>
-      <label for="aditions">Додатково</label> <br />
-      <input type="checkbox" name="add1" value="add1" />Набір статичної
-      піротехніки <br />
-      <input type="checkbox" name="add2" value="add2" />Вогняні серця <br />
-      <input type="checkbox" name="add3" value="add3" />Вогнемети <br />
-      <input type="checkbox" name="add4" value="add4" />Вогняний напис <br />
-      <input type="checkbox" name="add5" value="add5" />Піротехнічні віяла
-      <br />
-      <input type="checkbox" name="add6" value="add6" />Піротехнічні дабли
-      <br />
-      <input type="checkbox" name="add7" value="add7" />Вогняний куб <br />
+    <div id="extraOptions">
+      <div id="artistsRange">
+        <div id="nameForArtistsRange">КОЛЛИЧЕСТВО АРТИСТОВ</div>
+        <div class="artistNumbers">
+          <input type="range" min="1" max="5" value="2" id="artists" />
+          <div id="artistsNumbers">
+            <ul id="numbers">
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>4</li>
+              <li>5</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="additions">
+        <h4>ДОПОЛНИТЕЛЬНО</h4> 
+        <div>
+          <input type="checkbox" name="aditions" value="add1" class="adition" id="staticPiro"/> 
+          <label for="staticPiro">Набор статической пиротехники</label>
+        </div>
+        <div class="fireOnly">
+          <input type="checkbox" name="aditions" value="add2" class="adition" id="fireHearts" />
+          <label for="fireHearts">Огненные сердца</label>
+        </div>
+        <div class="fireOnly">
+          <input type="checkbox" name="aditions" value="add3" class="adition" class="" id="flamethrower" />
+          <label for="flamethrower">Огнеметы</label>
+        </div>
+        <div class="fireOnly">
+          <input type="checkbox" name="aditions" value="add4" class="adition" id="fireInscription" />
+          <label for="fireInscription">Огненая надпись</label>
+        </div>
+        <div>
+          <input type="checkbox" name="aditions" value="add5" class="adition" id="piroFans" />
+          <label for="piroFans">Пиротехнические веера</label>
+        </div>
+        <div>
+          <input type="checkbox" name="aditions" value="add6" class="adition" id="piroDabls" />
+          <label for="piroDabls">Пиротехнические даблы</label>
+        </div>
+        <div class="fireOnly">
+          <input type="checkbox" name="aditions" value="add7" class="adition" id="fireCube" />
+          <label for="fireCube">Огненный куб</label>
+        </div>
+      </div>
     </div>
-    <div>
-      <button type="submit">ЗАМОВИТИ</button>
+    <div class="order">
+      <button class="order-form" type="button">ЗАКАЗАТЬ</button>
     </div>
+  </form>
+  <!-- Invisible form for buttons-->
+  <div id="orderWindow">
+    <div id="order-form-name">
+      ЗАКАЗАТЬ ПРОГРАММУ
+    </div>
+    <form id="final-order-form">
+      <div id="name-form">
+        <label for="name">Имя</label> <br />
+        <input type="text" name="name" required />
+      </div>
+      <div id="phone-form">
+        <label for="phone">Телефон</label> <br />
+        <input type="tel" name="phone" required />
+      </div>
+      <div id="city-form">
+        <label for="city">Город</label> <br />
+        <input type="text" name="city" required />
+      </div>
+      <div id="data-form">
+        <label for="date">Дата выступления</label> <br />
+        <input type="date" name="date" required />
+      </div>
+      <div id="buttons-form">
+        <button type="button" id="back-button">Назад</button>
+        <button type="submit" id="submit-form">Заказать выступление</button>
+      </div>
+    </form>
+  </div>
     <footer>
-      <a href="https://www.youtube.com/channel/UCzvjfXRmL9pdY0H-le1D39Q"
-        ><img src="icons/youtube_logo.jpg" height="10%" width="10%" />
-      </a>
-      <a href="https://instagram.com/kd_fire_project?igshid=op9rw8sdgwmq"
-        ><img src="icons/instagram_logo.png" height="10%" width="10%" />
-      </a>
+      <div class="links">
+        <a href="https://www.youtube.com/channel/UCzvjfXRmL9pdY0H-le1D39Q"><img class="youtube"
+            src="icons/youtube_logo.png" />
+        </a>
+        <a href="https://instagram.com/kd_fire_project?igshid=op9rw8sdgwmq"><img class="insta"
+            src="icons/instagram_logo.png" />
+        </a>
+        <a href="https://www.facebook.com/FireProjectKD">
+          <img class="fb" src="icons/fb_logo.png">
+        </a>
+      </div>
     </footer>
+    <script src="JS/constructor.js"></script>
   </body>
 </html>

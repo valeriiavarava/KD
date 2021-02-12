@@ -3,64 +3,63 @@
   <head>
     <meta charset="UTF-8" />
     <title>KD FireProject</title>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/contacts.css">
   </head>
-
   <body>
     <!--главная картинка сайта-->
     <header>
-      <img src="header.png" height="90%" width="90%" />
+      <img class="headimg" src="header.png" />
     </header>
     <!--навигация по страничкам сайта-->
     <nav>
-      <table border="1">
-        <tr>
-          <td><a href="index.html"> ШОУ ПРОГРАМИ </a></td>
-          <td><a href="constructor.html">КОНСТРУКТОР ШОУ</a></td>
-          <td><a href="rider.html">РАЙДЕР</a></td>
-          <td><a href="about.html"> ПРО НАС </a></td>
-          <td><a href="contacts.html">КОНТАКТИ</a></td>
-        </tr>
-      </table>
+      <ul class="menu">
+        <li><a href="index.html"> ШОУ ПРОГРАММЫ </a></li>
+        <li><a href="constructor.html">КОНСТРУКТОР ШОУ</a></li>
+        <li><a href="rider.html">РАЙДЕР</a></li>
+        <li><a href="about.html"> О НАС </a></li>
+        <li><a href="contacts.html">КОНТАКТЫ</a></li>
+      </ul>
     </nav>
     <!--название текущей странички-->
-    <div>
-      <hr />
-      <h3>КОНТАКТИ</h3>
-      <hr />
+    <div class="name">
+      <h2>КОНТАКТЫ</h2>
     </div>
     <!--первый контакт-->
-    <section>
-      <img src="photos/contacts1.jpg" height="40%" width="40%" />
-      <p>АРТЕМ</p>
+    <section class="first-contact">
+      <img src="photos/contact1.png" class="contact-photo"/>
+      <p>АРТЁМ</p>
       <p>063 188 07 44</p>
       <p>097 161 31 26</p>
-      <img src="icons/telega_logo.png" height="10%" width="10%" />
-      <img src="icons/viber_logo.jpg" height="10%" width="10%" />
+      <img src="icons/telegа_logo.png" class="contact-icons" />
+      <img src="icons/viber_logo.png" class="contact-icons" />
     </section>
     <!--второй контакт-->
-    <section>
-      <img src="photos/contacts2.jpg" height="40%" width="40%" />
-      <p>ВАЛЕРІЯ</p>
+    <section class="second-contact">
+      <img src="photos/contact2.png" class="contact-photo" />
+      <p>ВАЛЕРИЯ</p>
       <p>067 172 22 67</p>
-      <img src="icons/telega_logo.png" height="10%" width="10%" />
-      <img src="icons/viber_logo.jpg" height="10%" width="10%" />
+      <img src="icons/telegа_logo.png" class="contact-icons" />
+      <img src="icons/viber_logo.png" class="contact-icons" />
     </section>
     <!--контактная почта-->
-    <div>
-        <img src="icons/mail_logo.png" height="10%" width="10%" >kd.fireproject@gmail.com </img>
-    </div>
-    <!--Запрос обратной связи-->
-    <div>
-        <button type="button">  ЗВОРОТНІЙ ДЗВІНОК</button>
+    <div id="mail-info">
+        <img src="icons/mail_logo.png" id="mail-logo" >kd.fireproject@gmail.com </img>
     </div>
     <!--нижняя часть сайта-->
     <footer>
-      <a href="https://www.youtube.com/channel/UCzvjfXRmL9pdY0H-le1D39Q"
-        ><img src="icons/youtube_logo.jpg" height="10%" width="10%" />
-      </a>
-      <a href="https://instagram.com/kd_fire_project?igshid=op9rw8sdgwmq"
-        ><img src="icons/instagram_logo.png" height="10%" width="10%" />
-      </a>
+      <div class="links">
+        <a href="https://www.youtube.com/channel/UCzvjfXRmL9pdY0H-le1D39Q"><img class="youtube"
+            src="icons/youtube_logo.png" />
+        </a>
+        <a href="https://instagram.com/kd_fire_project?igshid=op9rw8sdgwmq"><img class="insta"
+            src="icons/instagram_logo.png" />
+        </a>
+        <a href="https://www.facebook.com/FireProjectKD">
+          <img class="fb" src="icons/fb_logo.png">
+        </a>
+      </div>
     </footer>
   </body>
 </html>

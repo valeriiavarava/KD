@@ -3,77 +3,122 @@
   <head>
     <meta charset="UTF-8" />
     <title>KD FireProject</title>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/about.css">
   </head>
   <body>
     <!--главная картинка сайта-->
     <header>
-      <img src="header.png" height="90%" width="90%" />
+      <img class="headimg" src="header.png" />
     </header>
     <!--навигация по страничкам сайта-->
     <nav>
-      <table border="1">
-        <tr>
-          <td><a href="index.html"> ШОУ ПРОГРАММЫ </a></td>
-          <td><a href="constructor.html">КОНСТРУКТОР ШОУ</a></td>
-          <td><a href="rider.html">РАЙДЕР</a></td>
-          <td><a href="about.html">О НАС </a></td>
-          <td><a href="contacts.html">КОНТАКТЫ</a></td>
-        </tr>
-      </table>
+      <ul class="menu">
+        <li><a href="index.html"> ШОУ ПРОГРАММЫ </a></li>
+        <li><a href="constructor.html">КОНСТРУКТОР ШОУ</a></li>
+        <li><a href="rider.html">РАЙДЕР</a></li>
+        <li><a href="about.html"> О НАС </a></li>
+        <li><a href="contacts.html">КОНТАКТЫ</a></li>
+      </ul>
     </nav>
     <!--название текущей странички-->
-    <div>
-      <hr />
-      <h3>О НАС</h3>
-      <hr />
+    <div class="name">
+      <h2>О НАС</h2>
     </div>
-    <article>
+    <article id="info-text">
       <p>
-        Fire Project KD - команда профессиональных огненных артистов, которые
-        уже много лет оттачивают своё мастерство. Для нас важны высокий уровень
-        технической подготовки, профессионализм и желание дарить счастье
+        <b>Fire Project KD</b> - команда профессиональных огненных артистов, которые
+        уже много лет оттачивают своё мастерство. Для нас важны <span class="orange-text">высокий уровень
+        технической подготовки, профессионализм и желание дарить счастье</span> 
         зрителям.
       </p>
       <p>
         Участрники нашего проекта уже более восьми лет профессионально
         занимаются огненным искуством, а за 5 лет существования коллектива, мы
-        впечатлили не одну 1000 зрителей.
+        впечатлили <span class="orange-text">не одну 1000 зрителей</span>.
       </p>
       <p>
-        Для нас очень важно, чтобы наши клиенты получили максимум удовольствия и
-        минимум забот от нашего выступления, поэтому индивидуально подходим к
-        каждому заказу. Для этого мы предлагаем как уже поставленные программы,
+        Для нас очень важно, чтобы наши клиенты получили <span class="orange-text">максимум удовольствия и
+        минимум забот</span> от нашего выступления, поэтому <span class="orange-text">индивидуально подходим к
+        каждому заказу</span>. Для этого мы предлагаем как уже поставленные программы,
         так и уникальные - под Вашу музыку, тематику праздника и бюджет.
       </p>
     </article>
     <!--Раздел галереи фотографий-->
-    <div>
-      <img src="photos/photo1.jpg" />
-      <img src="photos/photo2.jpg" />
-      <img src="photos/photo3.jpg" />
-      <img src="photos/photo4.jpg" />
-      <img src="photos/photo5.jpg" />
+    <div id="galery-box">
+      <div class="slides">
+        <div class="number-text">1 / 6</div>
+        <img src="photos/photo1.jpg" class="galery-photo" />
+      </div>
+      <div class="slides">
+        <div class="number-text">2 / 6</div>
+        <img src="photos/photo2.jpg" class="galery-photo" />
+      </div>
+      <div class="slides">
+        <div class="number-text">3 / 6</div>
+        <img src="photos/photo3.jpg" class="galery-photo" />
+      </div>
+      <div class="slides">
+        <div class="number-text">4 / 6</div>
+        <img src="photos/photo4.jpg" class="galery-photo" />
+      </div>
+      <div class="slides">
+        <div class="number-text">5 / 6</div>
+        <img src="photos/photo5.jpg" class="galery-photo" />
+      </div>
+      <div class="slides">
+        <div class="number-text">6 / 6</div>
+        <img src="photos/photo6.jpg" class="galery-photo" />
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+      <!-- Thumbnail images -->
+      <div class="row">
+        <div class="column">
+          <img class="demo-cursor" src="photos/photo1.jpg" onclick="currentSlide(1)">
+        </div>
+        <div class="column">
+          <img class="demo-cursor" src="photos/photo2.jpg" onclick="currentSlide(2)">
+        </div>
+        <div class="column">
+          <img class="demo-cursor" src="photos/photo3.jpg" onclick="currentSlide(3)">
+        </div>
+        <div class="column">
+          <img class="demo-cursor" src="photos/photo4.jpg" onclick="currentSlide(4)">
+        </div>
+        <div class="column">
+          <img class="demo-cursor" src="photos/photo5.jpg" onclick="currentSlide(5)">
+        </div>
+        <div class="column">
+          <img class="demo-cursor" src="photos/photo6.jpg" onclick="currentSlide(6)">
+        </div>
+      </div>
     </div>
     <!--Раздел в рамочке и с текстом справа/слева от фото-->
-    <div>
-      <p>
+    <div id="text-photo-box">
+      <p class="box-text">
         Fire Project KD украсит любой праздник или мероприятие - от
-        нестандартного предложения руки и сердца огненной надписью до
-        масштабного пиротехнического и огненного шоу на корпоратив или открытие
-        заведения. Огненное выступление станет отличной частью развлекательной
-        программы на Вашей свадьбе, детском празднике, Дне Рождения или
-        праздновании Нового Года. Наши выступления не раз становились эффектным
-        окончанием шоу программы на Днях города, празднованиях Ивана Купалы,
-        Масленицы, Хеллоуина и Рождества.
+        нестандартного <span class="orange-text">предложения руки и сердца с огненной надписью</span> до
+        масштабного <span class="orange-text">пиротехнического и огненного шоу на корпоратив или открытие
+        заведения</span>. Огненное выступление станет отличной частью развлекательной
+        программы на <span class="orange-text">Вашей свадьбе</span>, <span class="orange-text">детском празднике</span>, <span class="orange-text">Дне Рождения</span> или
+        праздновании <span class="orange-text">Нового Года</span>. Наши выступления не раз становились эффектным
+        окончанием шоу программы на Днях города</span>, празднованиях <span class="orange-text">Ивана Купалы</span>,
+        <span class="orange-text">Масленицы</span>, <span class="orange-text">Хеллоуина</span> и <span class="orange-text">Рождества</span>.
       </p>
-      <img src="photos/pr2_1pers.jpg"
+      <div class="box-photo">
+        <img src="photos/pr2_1pers.jpg" class="galery-photo">
+      </div>
     </div>
-    <div>
+    <div id="programs-info">
       <p>
         Мы старательно подбираем программы под тематику события, поэтому имеем
-        большой выбор костюмов и образов:
+        <span class="orange-text">большой выбор костюмов и образов</span> на любой вкус:
       </p>
-      <ul>
+      <ul id="programs-list">
         <li>Классический.</li>
         <li>Украинский народный.</li>
         <li>Рок.</li>
@@ -81,15 +126,20 @@
         <li>Пиксельные костюмы.</li>
         <li>Фрик шоу.</li>
       </ul>
-      <img src="photos/pr3_1pers.jpg"
     </div>
     <footer>
-      <a href="https://www.youtube.com/channel/UCzvjfXRmL9pdY0H-le1D39Q"
-        ><img src="icons/youtube_logo.jpg" height="10%" width="10%" />
-      </a>
-      <a href="https://instagram.com/kd_fire_project?igshid=op9rw8sdgwmq"
-        ><img src="icons/instagram_logo.png" height="10%" width="10%" />
-      </a>
+      <div class="links">
+        <a href="https://www.youtube.com/channel/UCzvjfXRmL9pdY0H-le1D39Q"><img class="youtube"
+            src="icons/youtube_logo.png" />
+        </a>
+        <a href="https://instagram.com/kd_fire_project?igshid=op9rw8sdgwmq"><img class="insta"
+            src="icons/instagram_logo.png" />
+        </a>
+        <a href="https://www.facebook.com/FireProjectKD">
+          <img class="fb" src="icons/fb_logo.png">
+        </a>
+      </div>
     </footer>
+    <script src="JS/about.js"></script>
   </body>
 </html>

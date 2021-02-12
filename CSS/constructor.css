@@ -2,25 +2,22 @@ body {
   background-image: url(footer_lodyas.png);
   font-family: "Roboto Slab", sans-serif;
   font-size: 18px;
-}
-#main-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 1, 9% 1% 1fr 10fr 10fr 10fr 1%;
+  grid-template-rows: 1 9% 1% 1fr 10fr 1%;
 }
 
 header {
-  display: grid;
-  grid-area: "header";
   grid-column: 1/13;
 }
+
 .headimg {
   width: 100%;
   height: auto;
 }
 
 nav,
-ul {
+.menu {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -38,7 +35,6 @@ a {
 
 nav {
   display: grid;
-  grid-area: "nav";
   grid-column: 1/13;
   padding: 5px;
   z-index: 5;
@@ -63,64 +59,188 @@ nav {
   transition: all 0.3s 0.01s ease;
 }
 
-li:hover {
+.menu > li:hover {
   background: rgb(236, 138, 40);
 }
 
 .name {
-  display: grid;
   grid-column: 2/12;
   margin: 1em;
   text-align: center;
   background: rgb(236, 138, 40);
 }
 
-.prog {
-  display: grid;
-  grid-column: 2/12;
-  margin: 1em;
-  background: whitesmoke;
+#constructorForm {
+  grid-column: 3/11;
+  grid-row: 5/6;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
 }
 
-.prog h4 {
-  text-align: center;
-  display: table;
-  width: auto;
-  margin: 15px auto;
-  padding: 15px;
+#progButtons {
+  color: rgb(236, 138, 40);
+  order: 1;
+}
+
+#progButtons label {
+  cursor: pointer;
   border: 2px solid rgb(236, 138, 40);
-  color: black;
+  font-size: large;
+  margin: 5px;
+  padding: 10px;
+  display: inline-block;
 }
 
-.program-info {
+#progButtons input[type="radio"] {
+  display: none;
+}
+
+#progButtons input[type="radio"]:checked + label {
+  background: whitesmoke;
+  color: black;
+  border: 2px solid rgb(236, 138, 40);
+  opacity: 0.9;
+}
+
+#progButtons label:hover {
+  color: whitesmoke;
+  transition: all 0.3s 0.01s ease;
+}
+
+#canvaPic {
+  order: 2;
+}
+
+#price {
+  order: 3;
+  margin: 1em;
+  font-weight: 600;
+}
+
+#priceInput {
+  width: 100px;
+  text-align: center;
+  padding: 10px;
+  font-size: x-large;
+}
+
+#extraOptions {
+  order: 4;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
   align-items: center;
-  margin: 1em;
 }
 
-.program-info-desc {
-  display: flex;
-  flex: 1;
-  flex-basis: 200px;
-  align-self: center;
-  margin: 1em;
+.fireOnly {
+  display: inline;
 }
 
-.program-info-img {
-  display: flex;
-  flex: 1;
-  flex-basis: 200px;
-  align-self: center;
-  margin: 1em;
+#artistsRange {
+  color: rgb(236, 138, 40);
+  font-weight: 600;
+  display: block;
 }
-.photo {
+
+#artists {
+  -webkit-appearance: none;
+  appearance: none;
   width: 100%;
-  height: auto;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
 }
 
-.orderForm {
+#artists:hover {
+  opacity: 1;
+}
+
+#artists::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: rgb(236, 138, 40);
+  cursor: pointer;
+}
+
+#nameForArtistsRange {
+  margin: 1em;
+}
+
+.artistNumbers {
+  margin: 2em;
+}
+
+#numbers > li {
+  white-space: nowrap;
+}
+
+#numbers {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  width: 100%;
+  text-align: center;
+  grid-auto-columns: minmax(20%);
+  grid-auto-flow: column;
+}
+
+#tickmarks option {
+  display: inline;
+  width: 10px;
+  font-size: large;
+  color: whitesmoke;
+}
+
+#additions {
+  color: rgb(236, 138, 40);
+  margin: 2em;
+  line-height: 70%;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+#additions label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+#additions label::before {
+  content: "";
+  display: inline-block;
+  height: 14px;
+  width: 14px;
+  border: 2px solid #939598;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+}
+
+#additions input[type="checkbox"]:checked + label::before {
+  content: "✓";
+  font-weight: 800;
+  color: rgb(236, 138, 40);
+  border: 2px solid #fff;
+  width: 14px;
+  height: 14px;
+  margin: 5px;
+}
+
+.order {
+  order: 5;
+}
+
+.order-form {
   text-align: center;
   display: table;
   width: auto;
@@ -133,7 +253,7 @@ li:hover {
   color: black;
   transition: all 0.1s 0.01s ease;
 }
-.orderForm:hover {
+.order-form:hover {
   background: rgba(255, 130, 4, 0.699);
 }
 
@@ -239,8 +359,8 @@ li:hover {
 }
 
 footer {
-  display: grid;
   grid-column: 1/13;
+  grid-row: 9/10;
 }
 
 .links {
@@ -268,6 +388,6 @@ footer {
 }
 
 .fb {
-  width: 95%;
+  width: 92%;
   height: auto;
 }

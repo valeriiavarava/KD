@@ -6,11 +6,6 @@
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/index.css">
-    <style>
-      body {
-       background: url(CSS/footer_lodyas.png); 
-      }
-     </style>
   </head>
   <body>
     <div id="main-grid">  
@@ -24,13 +19,13 @@
           <li><a href="index.html"> ШОУ ПРОГРАММЫ </a></li>
           <li><a href="constructor.html">КОНСТРУКТОР ШОУ</a></li>
           <li><a href="rider.html">РАЙДЕР</a></li>
-          <li><a href="about.html"> ПРО НАС </a></li>
+          <li><a href="about.html"> О НАС </a></li>
           <li><a href="contacts.html">КОНТАКТЫ</a></li>
       </ul>
     </nav>
     <!--название текущей странички-->
     <div class="name">
-      <h2>ШОУ ПРОГРАММЫ</h3>
+      <h2>ШОУ ПРОГРАММЫ</h2>
     </div>
     <!--блок первой програмы-->
     <article class="prog">
@@ -46,11 +41,9 @@
       <!-- тут также будет ссілка на видео с полной программой-->
       <!-- <video URL="youtube.com/blabla"> Видео не поддерживается браузером </video> -->
       </div>
-      <div class="order">
-        <form>
-         <button class="order-form" type="button">ЗАКАЗАТЬ</button>
-       </form>
-      </div>
+      <form>
+        <button class="orderForm" type="button">ЗАКАЗАТЬ</button>
+      </form>
     </article>
     <!--блок второй програмы-->
     <article class="prog">
@@ -68,7 +61,7 @@
       </div>
       <div class="order">
         <form>
-          <button class="order-form" type="submit">ЗАКАЗАТЬ</button>
+          <button class="orderForm" type="button">ЗАКАЗАТЬ</button>
         </form>
       </div>
     </article>
@@ -88,10 +81,38 @@
       </div>
         <div class="order">
           <form>
-            <button class="order-form" type="submit">ЗАКАЗАТЬ</button>
+            <button class="orderForm" type="button">ЗАКАЗАТЬ</button>
           </form>
         </div>
     </article>
+    <!-- Invisible form for buttons-->
+    <div id="orderWindow">
+      <div id="order-form-name">
+        ЗАКАЗАТЬ ПРОГРАММУ
+      </div>
+      <form id="final-order-form">
+        <div id="name-form">
+          <label for="name">Имя</label> <br/>
+          <input type="text" name="name" required />
+        </div>
+        <div id="phone-form">
+          <label for="phone">Телефон</label> <br />
+          <input type="tel" name="phone" required />
+        </div>
+        <div id="city-form">
+          <label for="city">Город</label> <br />
+          <input type="text" name="city" required />
+        </div>
+        <div id="data-form">
+          <label for="date">Дата выступления</label> <br />
+          <input type="date" name="date" required />
+        </div>
+        <div id="buttons-form">
+          <button type="button" id="back-button">Назад</button>
+          <button type="submit" id="submit-form">Заказать выступление</button>
+        </div>
+      </form>
+    </div>
     <footer>
       <div class="links">
         <a href="https://www.youtube.com/channel/UCzvjfXRmL9pdY0H-le1D39Q"
@@ -106,5 +127,6 @@
       </div>
     </footer>
   </div>
+  <script src="JS/index.js"></script>
   </body>
 </html>
